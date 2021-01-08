@@ -1,0 +1,6 @@
+name: Randomdrops
+version: ${project.version}
+main: me.miked.randomdrops.Randomdrops
+api-version: 1.16
+authors: [ MikeD ]
+description: Every block drops different things
