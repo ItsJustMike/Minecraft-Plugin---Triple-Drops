@@ -11,12 +11,8 @@ public final class Randomdrops extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic//
         System.out.println("Hello!");
-        Random number = new Random();
-        int n = number.nextInt(51);
-        int randomNumber = n + 1;
-        System.out.println(n);
-}
-
+        getServer().getPluginManager().registerEvents(new BreakBlock(), this);
+    }
     @Override
     public void onDisable() {
         // Plugin shutdown logic
