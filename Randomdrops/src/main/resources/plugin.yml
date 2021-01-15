@@ -3,4 +3,9 @@ version: ${project.version}
 main: me.miked.randomdrops.Randomdrops
 api-version: 1.16
 authors: [ MikeD ]
-description: Every block drops different things
+description: Every block drops 3x the normal drops
+
+commands:
+  diamonds:
+    description: You have been given 64 diamonds.
+    usage: /<diamonds>
