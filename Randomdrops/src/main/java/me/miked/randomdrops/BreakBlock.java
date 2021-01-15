@@ -13,11 +13,15 @@ public class BreakBlock implements Listener {
 
         Block blockBroken = event.getBlock();
         event.setCancelled(true);
-        ItemStack item = new ItemStack(blockBroken.getType(), 3);
-        blockBroken.getWorld().dropItemNaturally(blockBroken.getLocation(), item);
-        blockBroken.setType(Material.AIR);
 
-
-
+        if (blockBroken.getType() == Material.DIAMOND_ORE) {
+            ItemStack diamonds = new ItemStack(Material.DIAMOND, 3);
+            blockBroken.getWorld().dropItemNaturally(blockBroken.getLocation(), diamonds);
+            blockBroken.setType(Material.AIR);
+        } else {
+            ItemStack item = new ItemStack(blockBroken.getType(), 3);
+            blockBroken.getWorld().dropItemNaturally(blockBroken.getLocation(), item);
+            blockBroken.setType(Material.AIR);
+        }
     }
 }
